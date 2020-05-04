@@ -8,7 +8,7 @@ import play.api.mvc.{Action, AnyContent}
 import services.CatalogAppService
 
 @Singleton
-class CatalogController @Inject()(ucc: UserControllerComponents, val catalogAppService: CatalogAppService)
+class CatalogController @Inject() (ucc: UserControllerComponents, val catalogAppService: CatalogAppService)
     extends UserBaseController(ucc)
     with ItemWrites {
 

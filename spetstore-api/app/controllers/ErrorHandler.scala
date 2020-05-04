@@ -16,15 +16,13 @@ class ErrorHandler @Inject() (
   sourceMapper: OptionalSourceMapper,
   router: Provider[Router]
 ) extends DefaultHttpErrorHandler(env, config, sourceMapper, router) {
-  override def onProdServerError(request: RequestHeader, exception: UsefulException): Future[Result] = {
+  override def onProdServerError(request: RequestHeader, exception: UsefulException): Future[Result] =
     Future.successful(
       InternalServerError("A server error occurred: " + exception.getMessage)
     )
-  }
 
-  override def onForbidden(request: RequestHeader, message: String): Future[Result] = {
+  override def onForbidden(request: RequestHeader, message: String): Future[Result] =
     Future.successful(
       Forbidden("You're not allowed to access this resource.")
     )
-  }
 }

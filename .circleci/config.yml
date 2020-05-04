@@ -42,6 +42,6 @@ jobs:
           key: v1-dependencies--{{ checksum "build.sbt" }}
 
       # run tests!
-      - run: cat /dev/null | sbt ";coverage;test:test;coverageReport"
+      - run: cat /dev/null | sbt ";scalafmtCheckAll;coverage;test:test;coverageAggregate;coverageReport"
       - codecov/upload:
           file: target/scala-2.13/scoverage-report/scoverage.xml
