@@ -1,4 +1,4 @@
-package infrastructures.item
+package item
 
 import base.{Id, MaybeId}
 import domains.item.{Item, ItemRepository}

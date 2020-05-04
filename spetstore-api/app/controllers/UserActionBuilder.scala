@@ -13,7 +13,7 @@ class UserRequest[A](request: Request[A], val messagesApi: MessagesApi)
     extends WrappedRequest(request)
     with UserRequestHeader
 
-class UserActionBuilder @Inject()(messagesApi: MessagesApi, playBodyParsers: PlayBodyParsers)(
+class UserActionBuilder @Inject() (messagesApi: MessagesApi, playBodyParsers: PlayBodyParsers)(
   implicit val executionContext: ExecutionContext
 ) extends ActionBuilder[UserRequest, AnyContent]
     with RequestMarkerContext
