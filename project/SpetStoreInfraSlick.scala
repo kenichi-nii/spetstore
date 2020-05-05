@@ -1,11 +1,12 @@
 import com.github.tototoshi.sbt.slick.CodegenPlugin
-import com.github.tototoshi.sbt.slick.CodegenPlugin.autoImport._
 import sbt.Keys._
 import sbt._
 import scoverage.ScoverageKeys._
 
 object SpetStoreInfraSlick {
+  import com.github.tototoshi.sbt.slick.CodegenPlugin.autoImport._
   import wartremover.WartRemover.autoImport._
+
   lazy val project = Project(
     """spetstore-infra-slick""",
     file("spetstore-infra-slick")
