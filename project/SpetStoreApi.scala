@@ -24,8 +24,8 @@ object SpetStoreApi {
     )
     .settings(
       libraryDependencies ++= Seq(
-        compilerPlugin(("com.github.ghik" % "silencer-plugin" % "1.6.0").cross(CrossVersion.full)),
-        ("com.github.ghik" % "silencer-lib" % "1.6.0" % Provided).cross(CrossVersion.full)
+        Dependencies.silencer.plugin,
+        Dependencies.silencer.lib
       ),
       scalacOptions ++= Seq("-P:silencer:pathFilters=target/.*")
     )
