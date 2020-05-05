@@ -14,5 +14,5 @@ object SpetStoreInfra {
         play.sbt.PlayImport.guice
       )
     )
-    .dependsOn(SpetStoreCore.project)
+    .dependsOn(SpetStoreCore.project, SpetStoreInfraSlick.project)
 }
