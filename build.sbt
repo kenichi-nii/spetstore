@@ -6,6 +6,7 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 lazy val core = SpetStoreCore.project
 lazy val infra = SpetStoreInfra.project
 lazy val infraSlick = SpetStoreInfraSlick.project
+lazy val infraScalikejdbc = SpetStoreInfraScalikejdbc.project
 lazy val flyway = SpetStoreFlyway.project
 lazy val api = SpetStoreApi.project
 lazy val test = SpetStoreTest.project
@@ -15,4 +16,4 @@ lazy val root = (project in file("."))
   .settings(
     name := """spetstore"""
   )
-  .aggregate(core, infra, infraSlick, api, test, flyway)
+  .aggregate(core, infra, infraSlick, infraScalikejdbc, api, test, flyway)
